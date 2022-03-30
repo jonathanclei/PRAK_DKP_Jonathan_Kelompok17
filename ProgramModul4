@@ -1,0 +1,61 @@
+public static void main(String[]args){
+        int pilihan,tambah,gender,hasil;
+        int saldo = 800000000;
+        Scanner input = new Scanner (System.in);
+        while (true) {
+            System.out.println("-----= KATALOGM MEJIRO 19XX =-----");
+            System.out.println("---------= OPSI KATALOG =---------");
+            System.out.println("-1. CEK SALDO         =-----------");
+            System.out.println("-2. MENABUNG          =-----------");
+            System.out.println("-3. TRANSAKSI         =-----------");
+            System.out.println("-4. KELUAR            =-----------");
+            System.out.println("-----------= ♩♪♩♪♩♪♩♪♩♪♪ =-----------");
+            System.out.println(       );
+            System.out.print("Jadi, Opsi Apa Yang Anda Ingin Lakukan Hari Ini? : ");
+            pilihan = Integer.parseInt(input.next());
+
+            switch(pilihan){
+                case 1 :
+                    System.out.println("Jumlah saldo anda yang tersimpan itu : Rp." + saldo + " loh! ");
+                    break;
+
+                case 2 :
+                    System.out.print("Jadi, berapa jumlah uang yang anda ingin tambahkan ke saldo? = Rp. ");
+                    tambah = input.nextInt();
+                    saldo += tambah;
+                    System.out.println("Uwaaaahh!! Saldo anda sekarang Rp." + saldo + "!");
+                    break;
+
+                case 3 :
+                    System.out.println("1. Jantan");
+                    System.out.println("2. Betina");
+                    System.out.println("    ");
+                    System.out.print("Ada kuda yang anda tertarik untuk dibeli? :");
+                    gender = input.nextInt();
+                    if (gender == 1) {
+                        System.out.println("Jantan yang anda minati? Opsi yang ada di katalog ada:");
+                        System.out.println("    ");
+                        System.out.println("1. Mejiro Ryan");
+                        System.out.println("2. Mejiro Bright");
+                    } else if (gender == 2) {
+                        System.out.println("Betina kah? Opsi yang ada di katalog ada:");
+                        System.out.println("    ");
+                        System.out.println("1. Mejiro Dober");
+                        System.out.println("2. Mejiro Ramonu");
+                    break;
+                    }
+                    break;
+
+                case 4 :
+                    System.out.println("Transaksi Kita Telah Selesai, Semoga Kita Bertemu Lagi!");
+                    System.out.println("----------------------= ♪♩♪♩♪♩♪♩♪♩♪♪ =--------------------");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Anda ini... Jangan menginput seasalnya saja ya! Sudah ada opsi (1,2,3,4)!");
+                    break;
+            }
+        }
+    }
+}
